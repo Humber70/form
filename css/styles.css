@@ -3,7 +3,8 @@ body {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: url('./img/back.png');
+    /* background-image: url('/img/back.png'); */
+    background: linear-gradient(90deg, #f35959,#e2e24a);
     background-repeat: no-repeat ;
     display: flex;
     justify-content: center;
@@ -23,7 +24,8 @@ body {
     --color-input: #efd768;
     --color-shadow: #b474e2;
 
-    --color-btn: #71e793;
+    --color-btn: #df9797;
+    --color-btn-grad: linear-gradient(90deg, #f35959,#e2e24a) 
 }
 
 
@@ -61,6 +63,8 @@ body {
 }
 
 
+/* inputs*/
+
 .container-form .login input[type="text"],
 input[type="password"],input[type="email"],
 input[type="submit"]
@@ -71,8 +75,7 @@ input[type="submit"]
     border-radius: 7px;
     background-color: #f8c1ed;
     padding: 12px 10px 12px;
-
-    transition: all .3s ease;
+    
 }
 
 .container-form .login input[type="text"]:focus,
@@ -88,12 +91,28 @@ input[type="submit"] {
     background-color: var(--color-input);
     color: #1f1e1e;
     cursor: pointer;
+
 }
 
 input[type="submit"]:hover {
-    background-color: var(--color-btn);
+
+    background: var(--color-btn);
 }
 
+input[type="submit"]:active {
+    cursor:auto;
+    background: var(--color-btn-grad);
+}
+
+
+/*Message error inputs*/
+
+.warning {
+    margin: 0px;
+}
+
+
+/* Responsive*/
 
 @media (max-width: 600px) {
     .container-form .form {
@@ -101,13 +120,12 @@ input[type="submit"]:hover {
     }
 } 
 
-
-
 @media (min-width: 600px) {
     .container-form .form {
         width: 400px;
     }
 } 
+
 
 
 
