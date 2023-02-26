@@ -4,48 +4,69 @@ document.addEventListener('DOMContentLoaded',() => {
     form()
 })
 
+//form elements
 const d = document;
 const $form = d.getElementById('form')
 const $name = d.getElementById('user');
 const $email = d.getElementById('correo');
 const $pass = d.getElementById('pass');
-const $warning = $form.querySelectorAll('.warning')
+
+//error messages
+const $parentWarning = $form.firstElementChild.nextElementSibling;
+
+const $warning = d.createElement("p");
 
 
-//Expresiones Regulares
-let regex = {    
-    regexName: /^[a-zA-z]+$/,
-    regexEmail: null,
+
+//Expresiones Regulares && validaciones
+let validations = {    
     
-    validation: function(text) {
-        return this.regexName.test(text)
-    }
-}
-Object.freeze(regex);
+    regex: function(text) {
+        let regexName = /^[a-zA-z]+$/
+        return regexName.test(text)
+    },
 
+    includeNumber: function (text) {
+        if(!isNaN(Number(text))) {
+            return false
+        }else {
+            return true
+        }
+    },
+
+    longCharacter: function (min, max, text) {
+        return (text.length > min && text.length <= max )
+    }
+
+}
+
+
+Object.freeze(validations);
 
 
 function form () {
-    //Desestructuracion del objeto "Expressiones Regulares"
 
+    
     $form.addEventListener('submit', (e) => {
         e.preventDefault();
     })
 
-    $name.addEventListener("input", (e) => {
-        let text = e.target.value;
-        const maxLength = 15;
-        const minLength = 5;
+    const {regex, includeNumber, longCharacter} = validations
+    
+    $name.addEventListener("blur", (e) => {
+        
+        let text = e.target.value.toUpperCase();
 
-        if(!regex.validation(text)) {
-            return console.log("Intenta no escribir numeros")
+    
+        if (includeNumber(text) && regex(text) && longCharacter(5,10,text)) {
+            $name.style.outline = "5px solid #97d8aa"
+            console.log("bien")
+        } else {
+            $name.style.outline = "5px solid red"
+            console.log("mal")
         }
-        
-        if(text.length > maxLength || text.length < minLength) {
-            return console.log(`La cantidad requierida de caracters es que sea mayor a 5 hasta 15`)
-        }
-        
-        return console.log(`Esta todo Ok, tu nombre ingresado es ${text}`)
+             
+         
     })
 
 }
