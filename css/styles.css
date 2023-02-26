@@ -11,7 +11,9 @@ body {
     /* background-color: var(--color-form); */
 }
 
-
+p {
+    margin: 0 0;
+}
 .color1 {color: #71e793;}
 .color2 {color: #efd768;}
 .color3 {color: #1a3db1;}
