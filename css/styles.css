@@ -36,7 +36,7 @@ body {
 }
 
 .container-form .form {
-    max-width: 60%;
+    max-width: 70%;
     width: 100%;
     margin: 0 50px;
     padding: 25px 40px;
@@ -103,6 +103,24 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: var(--color-input-btn-hover);
     
+}
+
+.container-form .login div {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    bottom: 35px;
+    right: 20px;
+}
+.container-form .login .fas {
+    font-size: 1.2em;
+    color: #a7a7a7d3;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.container-form .login .fas:hover {
+    color: #e2e2e2;
 }
 
 
