@@ -1,24 +1,9 @@
-// import { prevent } from "./fun";
-
-document.addEventListener('DOMContentLoaded',() => {
-    form()
-})
-
-//form elements
+//form
 const d = document;
 const $form = d.getElementById('form')
-const $name = d.getElementById('user');
-const $email = d.getElementById('correo');
-const $pass = d.getElementById('pass');
-
-//error messages
-const $parentWarning = $form.firstElementChild.nextElementSibling;
-
-const $warning = d.createElement("p");
 
 
-
-//Expresiones Regulares && validaciones
+//funcitons
 let validations = {    
     
     regex: function(text) {
@@ -39,37 +24,19 @@ let validations = {
     }
 
 }
-
-
 Object.freeze(validations);
 
+//functions inputs
+const validationInputs = (event) => {
+    event.preventDefault();
+    // const {user, correo, pass} = event.target;
 
-function form () {
-
-    
-    $form.addEventListener('submit', (e) => {
-        e.preventDefault();
-    })
-
-    const {regex, includeNumber, longCharacter} = validations
-    
-    $name.addEventListener("blur", (e) => {
-        
-        let text = e.target.value.toUpperCase();
-
-    
-        if (includeNumber(text) && regex(text) && longCharacter(5,10,text)) {
-            $name.style.outline = "5px solid #97d8aa"
-            console.log("bien")
-        } else {
-            $name.style.outline = "5px solid red"
-            console.log("mal")
-        }
-             
-         
-    })
+    // console.log(user.value, correo.value, pass.value)
 
 }
+
+$form.addEventListener('submit', validationInputs)
+
 
 
 

@@ -4,17 +4,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto&display=swap" rel="stylesheet">
-
         <link rel="stylesheet" href="/css/styles.css">
         <title>Formulario</title>
+
+        <!-- scripts -->
+        <script defer src="./js/index.js" type="module"></script>
     </head>
     <body>
-     
        <div class="container-form">
             <form class="form" action="#" id="form">
                 <h1 class="title-welcome">!Bievenido/a</h1>
@@ -41,21 +42,10 @@
                     <input type="password" name="pass-repeat" id="pass-repeat" placeholder="Repite la contraseña">
                 </div>
 
-                <div class="login">
                     <input type="submit" name="btn" id="btn" value="Continuar">
-                </div>
+                
 
             </form>
        </div>
-       <div class="container-data">
-            <template id="template-data">
-                <article class="card">
-                    <h2 id="data-name"></h2>
-                    <h3 id="data-email"></h3>
-                </article>
-            </template>
-       </div>
-       <script src="./js/fun.js" type="module"></script>
-       <script src="./js/index.js" type="module"></script>
     </body>
 </html>
