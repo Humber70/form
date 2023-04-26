@@ -2,15 +2,12 @@
 const d = document;
 const $form = d.getElementById("form");
 //icon
-const $icon_view = $form.querySelector(".fas");
-const $icon_view_repeat = $form.querySelector(".pass-repeat");
-console.log($icon_view_repeat);
-
+const $iconPassword = $form.querySelector(".fas");
+const $iconPasswordRepeat = $form.querySelector(".pass-repeat");
 //password
 const $pass = d.getElementById("pass");
 const $pass_repeat = d.getElementById("pass-repeat");
 
-//funcitons
 let validations = {
   regex: function (text) {
     let regexName = /^[a-zA-z]+$/;
@@ -34,37 +31,36 @@ Object.freeze(validations);
 //functions inputs
 const validationInputs = (event) => {
   event.preventDefault();
-  // const {user, correo, pass} = event.target;
-
-  // console.log(user.value, correo.value, pass.value)
 };
 
-const iconPass = (e) => {
-  e.target.classList.toggle("active");
+const changeTypePassword = (e) => {
+  let { classList } = e.target;
+
+  classList.toggle("active");
 
   if (e.target.matches(".active")) {
     $pass.type = "text";
-    e.target.classList.replace("fa-eye-slash", "fa-eye");
+    classList.replace("fa-eye-slash", "fa-eye");
   } else {
     $pass.type = "password";
-    e.target.classList.replace("fa-eye", "fa-eye-slash");
+    classList.replace("fa-eye", "fa-eye-slash");
   }
 };
 
-const iconPassRepeat = (e) => {
-  e.target.classList.toggle("active");
+const changeTypePasswordRepeat = (e) => {
+  let { classList } = e.target;
+  classList.toggle("active");
 
   if (e.target.matches(".active")) {
     $pass_repeat.type = "text";
-    e.target.classList.replace("fa-eye-slash", "fa-eye");
+    classList.replace("fa-eye-slash", "fa-eye");
   } else {
     $pass_repeat.type = "password";
-    e.target.classList.replace("fa-eye", "fa-eye-slash");
+    classList.replace("fa-eye", "fa-eye-slash");
   }
 };
 
-$icon_view.addEventListener("click", iconPass);
-
-$icon_view_repeat.addEventListener("click", iconPassRepeat);
+$iconPassword.addEventListener("click", changeTypePassword);
+$iconPasswordRepeat.addEventListener("click", changeTypePasswordRepeat);
 
 $form.addEventListener("submit", validationInputs);
