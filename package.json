@@ -1,0 +1,29 @@
+{
+  "name": "form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js --fix",
+    "formatter": "prettier --write ./js/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Humber70/form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Humber70/form/issues"
+  },
+  "homepage": "https://github.com/Humber70/form#readme",
+  "devDependencies": {
+    "eslint": "8.39.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-n": "15.7.0",
+    "eslint-plugin-promise": "6.1.1",
+    "prettier": "2.8.8"
+  }
+}
