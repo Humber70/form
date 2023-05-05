@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icnos -->
+    <script
+      src="https://kit.fontawesome.com/99d6ad452c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Formulario</title>
+
+    <!-- scripts -->
+    <script defer src="js/index.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="container-form">
+      <form class="form" action="#" id="form">
+        <h1 class="title-welcome">!Bievenido/a</h1>
+
+        <div class="login">
+          <label for="user">Nombre</label>
+          <input
+            type="text"
+            name="user"
+            id="user"
+            placeholder="Introduce tu nombre"
+            required
+          />
+        </div>
+
+        <div class="login">
+          <label for="correo">Email</label>
+          <input
+            type="email"
+            name="correo"
+            id="correo"
+            placeholder="Introduce tu correo"
+            required
+          />
+        </div>
+
+        <div class="login">
+          <label for="pass">Contraseña</label>
+          <input
+            type="password"
+            name="pass"
+            id="pass"
+            placeholder="Introduce tu contraseña"
+            required
+          />
+          <div>
+            <i class="fas fa-eye-slash"></i>
+          </div>
+        </div>
+
+        <div class="login">
+          <label for="pass-repeat">Repite la contraseña</label>
+          <input
+            type="password"
+            name="pass-repeat"
+            id="pass-repeat"
+            placeholder="Repite la contraseña"
+            required
+          />
+          <div>
+            <i class="fas pass-repeat fa-eye-slash"></i>
+          </div>
+        </div>
+
+        <input type="submit" name="btn" id="btn" value="Continuar" />
+      </form>
+    </div>
+  </body>
+</html>
