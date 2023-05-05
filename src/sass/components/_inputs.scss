@@ -1,0 +1,41 @@
+.login {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 0.9em;
+    color: #ecd8d8;
+    margin: 17px 0px 5px 5px;
+    transition: transform 0.1s ease;
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    font-family: "Roboto";
+    font-size: 0.9em;
+    border: 5px double rgb(70, 70, 70);
+    font-weight: 800;
+    letter-spacing: 0.11em;
+    color: rgb(219, 219, 219);
+    border-radius: 10px;
+    background-color: #383434c0;
+    padding: 15px 30px 15px 10px;
+
+    &::placeholder {
+      font-family: "Roboto";
+      font-weight: 700;
+    }
+    &:focus {
+      outline: 3px solid #4e4e4e;
+    }
+  }
+
+  @import "./iconView";
+}

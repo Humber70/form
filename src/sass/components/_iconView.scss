@@ -1,0 +1,18 @@
+div {
+  position: relative;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 37px;
+  right: 10px;
+
+  .fas {
+    font-size: 1.2em;
+    color: #a7a7a7d3;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #e2e2e2;
+    }
+  }
+}

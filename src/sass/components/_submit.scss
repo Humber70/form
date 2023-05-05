@@ -1,0 +1,13 @@
+input[type="submit"] {
+  width: 100%;
+  margin-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  background-color: $color-input-btn;
+  color: #838383;
+  cursor: not-allowed;
+  transition: background 0.4s ease;
+
+  &:hover {
+    background-color: $color-input-btn-hover;
+  }
+}

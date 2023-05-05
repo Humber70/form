@@ -1,0 +1,16 @@
+@media (min-width: 700px) {
+  .container-form .form {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+  }
+
+  .title-welcome {
+    grid-column: span 2;
+  }
+
+  input[type="submit"] {
+    grid-column: span 2;
+  }
+}
