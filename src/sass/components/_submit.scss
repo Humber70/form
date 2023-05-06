@@ -1,11 +1,18 @@
 input[type="submit"] {
   width: 100%;
   margin-top: 10px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto";
+  font-weight: 800;
+  font-size: 0.9em;
   background-color: $color-input-btn;
+  border: 5px double rgb(70, 70, 70);
   color: #838383;
   cursor: not-allowed;
+  letter-spacing: 0.11em;
+  border-radius: 10px;
+
   transition: background 0.4s ease;
+  padding: 15px 30px 15px 10px;
 
   &:hover {
     background-color: $color-input-btn-hover;
